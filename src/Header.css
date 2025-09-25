@@ -1,13 +1,39 @@
 .portfolio-header {
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+  border-bottom: none;
 }
 
-.profile-photo {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: 5px solid var(--primary-color);
-  object-fit: cover;
+.hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url('./minha-foto.jpg');
+  background-size: 60%; /* Ajuste para afastar a foto */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+
+  transform: translate(var(--move-x, 0), var(--move-y, 0));
+  transition: transform 3.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-section:hover {
+  background-size: 61%; /* Aumenta o zoom ao passar o mouse */
+}
+
+
+.hero-title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  margin-top: 0;
 }

@@ -1,12 +1,12 @@
 /* Estilos Globais e Variáveis do Tema */
 :root {
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --card-background: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --border-color: #ddd;
+    --background-color: #282c34; /* Novo cinza escuro */
+    --text-color: #e0e0e0; /* Cinza claro para o texto */
+    --primary-color: #61dafb; /* Azul claro para destaque */
+    --secondary-color: #4a505b;
+    --card-background: #3c4048; /* Cinza um pouco mais claro para os cards */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --border-color: #555;
 }
 
 body.dark-mode {

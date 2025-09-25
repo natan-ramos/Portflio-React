@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Portfólio Pessoal",
+    "description": "Um portfólio moderno construído com React, CSS Modules e efeitos interativos para mostrar minhas habilidades.",
+    "image": "/images/portfolio-react.png",
+    "link": "https://natan-ramos.github.io/meu-portfolio-react"
+  },
+  {
+    "id": 2,
+    "title": "Aplicativo de Lista de Tarefas",
+    "description": "Um aplicativo de lista de tarefas simples e intuitivo feito em React. Permite adicionar, editar e excluir tarefas.",
+    "image": "/images/todo-app.png",
+    "link": "https://example.com/todo-app"
+  }
+]

@@ -1,16 +1,18 @@
 import React from 'react';
 import Header from './Header';
 import Skills from './Skills';
-import ContactForm from './ContactForm'; // Importa o componente do formulário
-import ThemeToggle from './ThemeToggle'; // Importa o novo componente
+import ContactForm from './ContactForm';
+import ThemeToggle from './ThemeToggle';
+import ProjectList from './ProjectList'; // Importa o novo componente
 
 function App() {
   return (
     <div className="container">
-      <ThemeToggle /> {/* Adiciona o botão de tema */}
+      <ThemeToggle />
       <Header />
       <Skills />
-      <ContactForm /> {/* Usa o componente de formulário */}
+      <ProjectList /> {/* Adiciona a lista de projetos */}
+      <ContactForm />
     </div>
   );
 }
