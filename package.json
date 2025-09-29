@@ -1,5 +1,6 @@
 {
   "name": "meu-portfolio-react",
+  "homepage": "https://natan-ramos.github.io/Portf-lio-React", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
