@@ -1,12 +1,40 @@
 /* Estilos Globais e Variáveis do Tema */
 :root {
-    --background-color: #282c34; /* Novo cinza escuro */
-    --text-color: #e0e0e0; /* Cinza claro para o texto */
-    --primary-color: #61dafb; /* Azul claro para destaque */
-    --secondary-color: #4a505b;
-    --card-background: #3c4048; /* Cinza um pouco mais claro para os cards */
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    --border-color: #555;
+   :root {
+  /* Variáveis de Cores (Paleta Profissional) */
+  --primary-color: #5d5dff; /* Azul vibrante (para botões, foco) */
+  --accent-color: #ff9900; /* Laranja ou Amarelo (para destaque) */
+  --text-color: #e0e0e0; /* Cinza claro para texto (legível em fundo escuro) */
+  --text-dark: #333333; /* Texto escuro */
+  --background-color: #1a1a1a; /* Fundo principal (modo escuro) */
+  --header-background: #252525; /* Fundo do Header/Footer (um pouco mais claro) */
+  --card-background: #333333; /* Fundo dos cards */
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color); /* Aplica a cor de fundo */
+  color: var(--text-color); /* Aplica a cor do texto */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Estilo para garantir que o contêiner centralize o conteúdo */
+.container {
+    max-width: 1200px; /* Limita a largura do conteúdo principal */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    padding: 20px;
+}
+
 }
 
 body.dark-mode {

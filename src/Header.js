@@ -1,39 +1,45 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
+// 1. Importa a imagem de perfil
+import profileImage from './minha-foto.jpg'; 
+
 function Header() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseMove = (e) => {
-    // Calcula a posição do mouse relativa ao centro da div
-    const { clientX, clientY, currentTarget } = e;
-    const { offsetWidth, offsetHeight, offsetLeft, offsetTop } = currentTarget;
-
-    const x = clientX - (offsetLeft + offsetWidth / 2);
-    const y = clientY - (offsetTop + offsetHeight / 2);
-
-    setMousePosition({ x: x / 20, y: y / 20 }); // Dividimos para um movimento mais sutil
-  };
-
-  const handleMouseLeave = () => {
-    // Retorna a imagem para o centro quando o mouse sai
-    setMousePosition({ x: 0, y: 0 });
-  };
+  const [isHovering, setIsHovering] = useState(false); 
+  
+  // Nota: Você pode remover o useState (acima) se não o estiver usando para hover ou tema.
 
   return (
-    <header className="portfolio-header">
-      {/* Adiciona os eventos para detectar o movimento do mouse */}
-      <div 
-        className="hero-section" 
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        // Passa a posição do mouse para o CSS via variáveis de estilo
-        style={{ '--move-x': `${mousePosition.x}px`, '--move-y': `${mousePosition.y}px` }}
-      >
-        <h1 className="hero-title">Natan Ramos</h1>
-        <p className="hero-subtitle">Desenvolvedor Web Front-End Iniciante</p>
+    <header className="header">
+      <div className="header-content">
+        <h1 className="logo">
+          {/* O logo volta para a Home Page (Rota "/") */}
+          <Link to="/" className="nav-link">
+            Natan Ramos
+          </Link>
+        </h1>
+        <nav>
+          <ul className="nav-links">
+            <li>
+              <Link to="/" className="nav-link">
+                Projetos
+              </Link>
+            </li>
+            <li>
+              <Link to="/contato" className="nav-link">
+                Contato
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
+      
+      {/* 2. Adiciona a imagem de perfil */}
+      <div className="profile-photo-container">
+        <img src={profileImage} alt="Foto de perfil de Natan" className="profile-photo"/>
+      </div>
+
     </header>
   );
 }

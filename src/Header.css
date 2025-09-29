@@ -1,39 +1,67 @@
-.portfolio-header {
-  margin-bottom: 20px;
-  border-bottom: none;
+.header {
+  background-color: var(--header-background); /* Cor de fundo vinda da variável */
+  padding: 15px 0; /* Padding vertical, zero horizontal para ocupar a largura */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra suave para destaque */
 }
 
-.hero-section {
-  position: relative;
-  height: 400px;
-  background-image: url('./minha-foto.jpg');
-  background-size: 60%; /* Ajuste para afastar a foto */
-  background-position: center;
+.header-content {
+  max-width: 1200px; /* Alinha com o .container do index.css */
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Espaça o logo e a navegação */
   align-items: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px var(--shadow-color);
-
-  transform: translate(var(--move-x, 0), var(--move-y, 0));
-  transition: transform 3.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.hero-section:hover {
-  background-size: 61%; /* Aumenta o zoom ao passar o mouse */
+.logo a {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--primary-color); /* O logo usa a cor principal */
+  text-decoration: none;
 }
 
-
-.hero-title {
-  font-size: 3em;
-  margin-bottom: 10px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-subtitle {
-  font-size: 1.5em;
-  margin-top: 0;
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color); /* Troca de cor ao passar o mouse */
+}
+
+/* Estilos da sua foto (ajustados para serem mais profissionais) */
+.profile-photo {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid var(--primary-color); 
+  margin-left: 20px;
+  cursor: pointer; /* Indica que é clicável (embora não seja) */
+}
+
+.profile-photo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajusta a disposição do header para incluir a foto */
+.header-content {
+  /* Altera a disposição para acomodar a foto ao lado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

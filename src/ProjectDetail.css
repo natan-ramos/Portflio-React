@@ -1,0 +1,36 @@
+/* Estilo para a página de detalhes do projeto */
+.project-detail {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto; /* Centraliza a página de detalhes */
+  line-height: 1.6;
+}
+
+.project-detail h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--card-background); /* Linha divisória */
+  padding-bottom: 10px;
+}
+
+.project-detail h2 {
+  font-size: 1.8em;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+.project-detail p {
+  color: var(--text-color);
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Estilo para a imagem principal do projeto (se você adicionar) */
+.project-detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
