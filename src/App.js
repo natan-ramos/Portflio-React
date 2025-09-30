@@ -5,6 +5,7 @@ import Footer from './Footer';
 import ProjectList from './ProjectList';
 import './App.css';
 import ProjectDetail from './ProjectDetail';
+import ContactForm from './ContactForm'; // ✅ Importando o formulário
 
 // Componentes para as Rotas
 function HomePage() {
@@ -18,8 +19,8 @@ function HomePage() {
 function ContactPage() {
   return (
     <main>
-      <h1>Entre em Contato</h1>
-      <p>Detalhes de contato virão aqui!</p>
+      {/* ⚡ A CORREÇÃO: Renderizando o formulário no lugar do texto ⚡ */}
+      <ContactForm />
     </main>
   );
 }
@@ -29,17 +30,11 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        {/* Este é o ÚNICO bloco <Routes> necessário! */}
        <Routes>
-  {/* Rota 1: Home Page */}
-  <Route path="/" element={<HomePage />} />
-  
-  {/* Rota 2: Contato */}
-  <Route path="/contato" element={<ContactPage />} />
-  
-  {/* Rota 3: APENAS a linha que chama o componente ProjectDetail */}
-  <Route path="/projetos/:id" element={<ProjectDetail />} />
-</Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contato" element={<ContactPage />} />
+          <Route path="/projetos/:id" element={<ProjectDetail />} />
+        </Routes>
       </div>
       <Footer />
     </div>
