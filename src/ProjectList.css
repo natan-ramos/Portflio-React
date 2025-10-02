@@ -1,85 +1,99 @@
-/* Estiliza o título da seção */
+/* Estilos para o componente ProjectList */
+
+.project-list-section {
+    font-family: 'Inter', sans-serif;
+    /* CORREÇÃO FINAL: Usa 10px de padding lateral para dar o espaçamento exato que você precisava. */
+    padding: 80px 10px; 
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left; /* Garante que elementos de texto na seção principal sigam o alinhamento esquerdo */
+}
+
+/* Estiliza o título da seção (o "Meus Projetos") */
 section h2 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  font-size: 2em;
-  color: var(--text-color);
+    text-align: left; /* Garante alinhamento à esquerda */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    /* Margens e padding zerados para que ele respeite apenas o padding do pai (10px) */
+    margin-left: 0; 
+    padding-left: 0;
+    font-size: 2em;
+    color: var(--text-color);
 }
 
 /* 1. Container Principal com CSS Grid */
 .project-list-container {
-  display: grid;
-  /* Cria colunas responsivas: no mínimo 300px, ajusta a quantidade */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px; /* Espaçamento entre os cards */
-  padding: 20px 0;
+    display: grid;
+    /* Cria colunas responsivas: no mínimo 300px, ajusta a quantidade */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 20px 0;
 }
 
 /* Estilo do link que envolve o card */
 .project-card-link {
-  text-decoration: none; /* Remove sublinhado do link */
-  color: inherit; /* Mantém a cor do texto do contêiner */
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto do contêiner */
 }
 
 /* 2. Estilo do Card Individual */
 .project-card {
-  background-color: var(--card-background); /* Fundo escuro sutil para o card */
-  border-radius: 12px;
-  overflow: hidden; /* Garante que a imagem se ajuste ao border-radius */
-  box-shadow: 0 4px 15px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
-  height: 100%; /* Garante que todos os cards tenham a mesma altura na grade */
-  display: flex;
-  flex-direction: column;
+    background-color: var(--card-background); /* Fundo escuro sutil para o card */
+    border-radius: 12px;
+    overflow: hidden; /* Garante que a imagem se ajuste ao border-radius */
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura na grade */
+    display: flex;
+    flex-direction: column;
 }
 
 /* 3. Efeito de Hover (Passar o mouse) */
 .project-card:hover {
-  transform: translateY(-8px); /* Eleva o card levemente */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra mais forte */
+    transform: translateY(-8px); /* Eleva o card levemente */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra mais forte */
 }
 
 /* Estilo da Imagem */
 .project-image {
-  width: 100%;
-  height: 200px; /* Altura fixa para todas as imagens */
-  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-  transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Estilo do Conteúdo (Título e Descrição) */
 .project-content {
-  padding: 20px;
-  flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 20px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
 }
 
 .project-content h3 {
-  color: var(--primary-color);
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
 }
 
 .project-content p {
-  color: var(--text-color);
-  font-size: 0.95em;
+    color: var(--text-color);
+    font-size: 0.95em;
 }
 
 /* 4. Estilos de Efeitos Específicos (Grayscale, Zoom, Contrast) */
 
 /* Efeito P&B suave (grayscale) */
 .grayscale-faded {
-  filter: grayscale(80%) contrast(110%);
+    filter: grayscale(80%) contrast(110%);
 }
 
 /* Efeito de zoom na imagem ao passar o mouse */
 .project-card:hover .zoomed-image {
-  transform: scale(1.05);
-  filter: grayscale(0%) contrast(100%); /* Remove o efeito P&B no hover */
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(100%); /* Remove o efeito P&B no hover */
 }
 
 /* Efeito de contraste específico (se necessário) */
 .contrast-enhanced {
-  filter: contrast(120%);
+    filter: contrast(120%);
 }

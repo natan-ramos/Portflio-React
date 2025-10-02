@@ -1,0 +1,25 @@
+/* src/App.css */
+:root {
+  --background-color: #cbccb7; 
+  --text-color: #333333; 
+}
+
+.App {
+  margin-top: 0; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color); 
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0; 
+  padding: 0;
+}

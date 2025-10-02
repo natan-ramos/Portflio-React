@@ -9,3 +9,60 @@ footer {
   box-shadow: 0 -4px 10px var(--shadow-color); /* Sombra para separar o conteúdo */
   margin-top: 40px;
 }
+/* src/Footer.css */
+
+.footer {
+    /* Define o footer como um flex container, alinhando tudo no centro */
+    display: flex;
+    justify-content: space-between; /* Espaça a seção de links e o copyright */
+    align-items: center; 
+    
+    background-color: transparent; 
+    color: var(--text-color-faded);
+    
+    padding: 30px 50px; 
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Linha fina de separação */
+
+    width: 100%;
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif;
+}
+
+/* Container para a logo e os links */
+.footer-links-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaço entre a logo e a navegação */
+}
+
+/* Estilo do Ícone do GitHub */
+.footer-github-logo {
+    color: var(--text-color); /* Padrão: Preto suave */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-github-logo:hover {
+    color: var(--primary-color); /* Hover: Azul Marinho Profundo */
+    transform: scale(1.1);
+}
+
+/* Estilo da Navegação (Projetos / Contato) */
+.footer-nav a {
+    color: var(--text-color-faded); 
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color); /* Hover: Verde Floresta */
+}
+
+/* Estilo do Texto de Copyright */
+.footer-copyright {
+    margin: 0;
+    font-size: 0.85em;
+    font-weight: 400;
+}

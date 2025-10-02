@@ -1,67 +1,261 @@
+/* RESET GLOBAL: Remove margens padrão do corpo da página (essencial para remover o vão) */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+}
+
+:root {
+  --primary-color: #1A1D2E;
+  --text-color: #212121;
+  --text-color-faded: #444444;
+  --accent-color: #365314;
+}
+
+/* CONTAINER PRINCIPAL DO HEADER */
 .header {
-  background-color: var(--header-background); /* Cor de fundo vinda da variável */
-  padding: 15px 0; /* Padding vertical, zero horizontal para ocupar a largura */
-  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra suave para destaque */
-}
-
-.header-content {
-  max-width: 1200px; /* Alinha com o .container do index.css */
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between; /* Espaça o logo e a navegação */
-  align-items: center;
-}
-
-.logo a {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: var(--primary-color); /* O logo usa a cor principal */
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-left: 30px;
-}
-
-.nav-link {
-  text-decoration: none;
+  background-color: transparent;
   color: var(--text-color);
+  
+  /* CORREÇÃO LIMPA: Remove padding e margem sem !important */
+  padding: 0; 
+  margin-top: 50; 
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  
+  min-height: 80px;
+  position: relative; 
+  height: 100vh; 
+}
+
+/* LOGO FIXA DO GITHUB */
+.github-logo-fixed {
+  position: fixed;
+  top: 15px;
+  left: 50px;
+  z-index: 9999;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.github-logo-fixed:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+
+/* SEÇÃO DA ESQUERDA: Nome e Detalhes */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: absolute;
+  
+  /* Mantido: Subida vertical do bloco todo */
+  top: calc(50% - 235px); 
+  
+  left: 50px; 
+  z-index: 100;
+  
+  transform: none; 
+  
+  font-family: 'Inter', sans-serif;
+  max-width: 30%;
+  
+  animation: slideInFromLeft 1.4s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* TÍTULO/NOME */
+.site-title {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 3em;
+  letter-spacing: -0.5px;
+  font-weight: 800;
+
+  /* Mantido: Recuo horizontal do nome */
+  margin-left: -45px; 
+  /* Mantido: Espaçamento vertical entre nome e características */
+  margin-bottom: -10px; 
+  
+  transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.site-title:hover {
+  color: var(--accent-color);
+}
+
+/* DETALHES ABAIXO DO NOME */
+.header-details {
+  display: flex;
+  flex-direction: column;
+  
+  /* ⭐️ CORREÇÃO VERTICAL: Restaurado para o valor que você forneceu (-100px) */
+  margin-top: -90px;
+  
+  /* ⭐️ CORREÇÃO HORIZONTAL: Aplicado o mesmo recuo do nome para alinhar horizontalmente */
+  margin-left: 70px; 
+  
+  /* Mantido: Reduz o espaço entre as linhas de características */
+  gap: -80px;
+}
+
+.detail-item {
+  margin: 0;
+  /* Mantido: Aumentando o tamanho da fonte */
+  font-size: 1.3em; 
   font-weight: 500;
+  color: var(--text-color-faded);
+}
+
+/* NAVEGAÇÃO (NO FOOTER) */
+.header-nav {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: 20px;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: var(--primary-color); /* Troca de cor ao passar o mouse */
+.header-nav a:hover {
+  color: var(--primary-color);
 }
 
-/* Estilos da sua foto (ajustados para serem mais profissionais) */
-.profile-photo {
-  width: 80px; 
-  height: 80px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  border: 3px solid var(--primary-color); 
-  margin-left: 20px;
-  cursor: pointer; /* Indica que é clicável (embora não seja) */
+/* SEÇÃO DO VÍDEO CENTRAL: Centralizado na tela (Mantido) */
+/* SEÇÃO DO VÍDEO CENTRAL */
+.video-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  /* ⭐️ AJUSTE: Move o vídeo 15px para a esquerda. */
+  /* O primeiro -50% centraliza, e o - 15px o move um pouco mais para a esquerda. */
+  transform: translate(calc(-50% - 20px), -50%); 
+  
+  width: 400px; 
+  height: 400px; 
+  max-width: 40%; 
+  z-index: 50;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.profile-photo-container {
-    display: flex;
-    align-items: center;
+#header-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
+  /* Inicialmente invisível para evitar 'flash' antes da animação */
+  opacity: 0; 
+  
+  /* APLICAÇÃO DA ANIMAÇÃO DE FADE IN */
+  animation: fadeIn 0.4s ease-out forwards;
+  
+  /* ATRASO: Começa 0.5 segundos após a página carregar */
+  animation-delay: 0.5s; 
 }
 
-/* Ajusta a disposição do header para incluir a foto */
-.header-content {
-  /* Altera a disposição para acomodar a foto ao lado */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ESTILOS DA FOTO (SEÇÃO DA DIREITA) */
+.header-right {
+  /* AJUSTE PARA CENTRALIZAR VERTICALMENTE com o vídeo */
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); /* Centraliza o bloco na altura da tela */
+  right: 50px; 
+
+  perspective: 1000px;
+  transition: transform 0.2s ease-out;
+  z-index: 100;
+}
+
+/* FOTO */
+.profile-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border: none;
+  
+  /* Resetamos o transform para não conflitar com o transform do .header-right */
+  transform: none; 
+  
+  transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  animation: slideInFromRight 1.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* EFEITO HOVER */
+.header-right:hover .profile-image {
+  transform: scale(1.08); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+
+/* === KEYFRAMES (ANIMAÇÕES) === */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100vw);
+    filter: blur(15px);
+    opacity: 0;
+  }
+  85% {
+    transform: translateX(-100px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100vw);
+    filter: blur(15px);
+    opacity: 0;
+  }
+  85% {
+    transform: translateX(100px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+/* === NOVO KEYFRAME: EFEITO FADE IN SIMPLES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

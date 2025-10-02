@@ -1,64 +1,36 @@
 /* Estilos Globais e Variáveis do Tema */
 :root {
-   :root {
-  /* Variáveis de Cores (Paleta Profissional) */
+  /* Variáveis de Cores */
   --primary-color: #5d5dff; /* Azul vibrante (para botões, foco) */
-  --accent-color: #ff9900; /* Laranja ou Amarelo (para destaque) */
-  --text-color: #e0e0e0; /* Cinza claro para texto (legível em fundo escuro) */
-  --text-dark: #333333; /* Texto escuro */
-  --background-color: #1a1a1a; /* Fundo principal (modo escuro) */
-  --header-background: #252525; /* Fundo do Header/Footer (um pouco mais claro) */
-  --card-background: #333333; /* Fundo dos cards */
-  --shadow-color: rgba(0, 0, 0, 0.4);
+  --accent-color: #ff9900; /* Laranja/Amarelo (para destaque) */
+  
+  /* ⚡ AJUSTE 1: NOVO FUNDO CLARO (Seu #ecc481) ⚡ */
+  --background-color:    #cbccb7; 
+  
+  /* ⚡ AJUSTE 2: TEXTO ESCURO PARA SER LEGÍVEL NO FUNDO CLARO ⚡ */
+  --text-color: #333333; 
+  --text-dark: #e4d6d6; 
+
+  /* AJUSTE 3: FUNDO DE HEADER/CARD ESCURO QUEBRARIA NO TEMA CLARO. */
+  /* Vamos usar um tom mais claro para Header/Cards. */
+  --header-background: #fff; /* Fundo do Header Branco */
+  --card-background: #f8f8f8; /* Fundo dos cards (quase branco) */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Sombra mais suave */
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color); /* Aplica a cor de fundo */
-  color: var(--text-color); /* Aplica a cor do texto */
+  
+  /* Aplicando o tema claro por padrão */
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+  transition: background-color 0.5s, color 0.5s;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Estilo para garantir que o contêiner centralize o conteúdo */
-.container {
-    max-width: 1200px; /* Limita a largura do conteúdo principal */
-    margin: 0 auto; /* Centraliza o contêiner na tela */
-    padding: 20px;
-}
-
-}
-
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #f4f4f4;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --card-background: #1e1e1e;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --border-color: #444;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

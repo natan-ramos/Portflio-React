@@ -5,37 +5,43 @@ import Footer from './Footer';
 import ProjectList from './ProjectList';
 import './App.css';
 import ProjectDetail from './ProjectDetail';
-import ContactForm from './ContactForm'; // ✅ Importando o formulário
+import ContactForm from './ContactForm';
 
-// Componentes para as Rotas
+// Componente para a Rota Home (Página Inicial/Projetos)
 function HomePage() {
   return (
-    <main>
+    <main className="main-content">
+      {/* Aqui a lista de projetos será renderizada */}
       <ProjectList />
     </main>
   );
 }
 
+// Componente para a Rota Contato
 function ContactPage() {
   return (
-    <main>
-      {/* ⚡ A CORREÇÃO: Renderizando o formulário no lugar do texto ⚡ */}
+    <main className="main-content">
+      {/* Aqui o formulário de contato será renderizado */}
       <ContactForm />
     </main>
   );
 }
 
+// Componente Principal do Aplicativo
 function App() {
   return (
     <div className="App">
       <Header />
+      
+      {/* O container deve envolver apenas o conteúdo roteável para não afetar Header/Footer */}
       <div className="container">
-       <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contato" element={<ContactPage />} />
           <Route path="/projetos/:id" element={<ProjectDetail />} />
         </Routes>
       </div>
+      
       <Footer />
     </div>
   );
