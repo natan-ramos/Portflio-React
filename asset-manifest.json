@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.46a7d03e.css",
+    "main.css": "./static/css/main.2c18b228.css",
     "main.js": "./static/js/main.05671a1b.js",
     "static/media/todo-app.png": "./static/media/todo-app.1f5ee94232af605c6a23.png",
     "static/media/minha-foto2.png": "./static/media/minha-foto2.48d3e3cb39a882a7c530.png",
     "static/media/portfolio-react.png": "./static/media/portfolio-react.48d3e3cb39a882a7c530.png",
     "static/media/anaoprogramando.mp4": "./static/media/anaoprogramando.dca80f9075384a1ac614.mp4",
     "index.html": "./index.html",
-    "main.46a7d03e.css.map": "./static/css/main.46a7d03e.css.map",
+    "main.2c18b228.css.map": "./static/css/main.2c18b228.css.map",
     "main.05671a1b.js.map": "./static/js/main.05671a1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.46a7d03e.css",
+    "static/css/main.2c18b228.css",
     "static/js/main.05671a1b.js"
   ]
 }
