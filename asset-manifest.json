@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.3e2fd151.css",
-    "main.js": "./static/js/main.5f110ae0.js",
+    "main.css": "./static/css/main.46a7d03e.css",
+    "main.js": "./static/js/main.05671a1b.js",
     "static/media/todo-app.png": "./static/media/todo-app.1f5ee94232af605c6a23.png",
+    "static/media/minha-foto2.png": "./static/media/minha-foto2.48d3e3cb39a882a7c530.png",
     "static/media/portfolio-react.png": "./static/media/portfolio-react.48d3e3cb39a882a7c530.png",
-    "static/media/minha-foto.jpg": "./static/media/minha-foto.4329e3833d458f3719d7.jpg",
+    "static/media/anaoprogramando.mp4": "./static/media/anaoprogramando.dca80f9075384a1ac614.mp4",
     "index.html": "./index.html",
-    "main.3e2fd151.css.map": "./static/css/main.3e2fd151.css.map",
-    "main.5f110ae0.js.map": "./static/js/main.5f110ae0.js.map"
+    "main.46a7d03e.css.map": "./static/css/main.46a7d03e.css.map",
+    "main.05671a1b.js.map": "./static/js/main.05671a1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e2fd151.css",
-    "static/js/main.5f110ae0.js"
+    "static/css/main.46a7d03e.css",
+    "static/js/main.05671a1b.js"
   ]
 }
