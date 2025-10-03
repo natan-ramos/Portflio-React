@@ -259,3 +259,127 @@ body, html {
     opacity: 1;
   }
 }
+/* ======================================= */
+/* === RESPONSIVIDADE PARA CELULAR/TABLET === */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. CONTAINER PRINCIPAL: Volta para o fluxo normal e empilha */
+    .header {
+        /* Desativa o height: 100vh para permitir a rolagem */
+        height: auto; 
+        min-height: 100vh;
+        
+        /* Torna o header um flex container vertical para empilhamento */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; /* Centraliza tudo horizontalmente */
+        
+        /* Remove o posicionamento relativo */
+        position: relative; 
+        
+        padding: 40px 20px;
+        gap: 50px; /* Espaço entre os blocos (nome, video, foto) */
+    }
+
+    /* 2. LOGO GITHUB & NAV (Ajusta o posicionamento fixo) */
+    .github-logo-fixed {
+        left: 20px; /* Mais perto da borda */
+        top: 20px;
+    }
+    .header-nav {
+        right: 20px;
+        top: 20px;
+    }
+
+
+    /* 3. SEÇÃO ESQUERDA (Nome e Características) */
+    .header-left {
+        /* Remove o posicionamento absoluto e o transform */
+        position: static; 
+        transform: none; 
+        left: 0; 
+        top: 0;
+        
+        max-width: 100%;
+        width: 100%;
+        
+        /* Centraliza o conteúdo dentro do bloco */
+        align-items: center; 
+        
+        /* Garante que as animações não causem bugs */
+        animation: none !important; 
+        opacity: 1 !important; 
+    }
+
+    /* AJUSTES DE TEXTO */
+    .site-title {
+        font-size: 2.2em; 
+        /* Remove os recuos que faziam sentido no desktop */
+        margin-left: 0; 
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    .header-details {
+        /* Ajusta o espaçamento vertical e remove o recuo horizontal */
+        margin-top: 5px; 
+        margin-left: 0; 
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .detail-item {
+        font-size: 1em; 
+    }
+
+
+    /* 4. VÍDEO CENTRAL */
+    .video-container {
+        /* Remove o posicionamento absoluto e o transform de centralização */
+        position: static; 
+        transform: none; 
+        
+        /* Define um tamanho razoável para o celular */
+        width: 100%; 
+        max-width: 300px;
+        height: 300px; 
+
+        /* Garante que o vídeo fique centralizado */
+        margin: 0 auto;
+        
+        /* Reseta as animações para não interferir */
+        animation: none !important;
+        opacity: 1 !important; 
+    }
+    
+    /* 5. FOTO DE PERFIL (Seção Direita) */
+    .header-right {
+        /* Remove o posicionamento absoluto e o transform */
+        position: static;
+        transform: none; 
+        right: 0;
+        
+        /* Centraliza a foto no fluxo de coluna */
+        align-self: center; 
+        
+        /* Reseta as animações */
+        animation: none !important;
+        opacity: 1 !important; 
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        transform: none; 
+        animation: none !important;
+        opacity: 1 !important;
+    }
+    
+    /* Remove o efeito 3D que pode bugar em mobile */
+    .header-right:hover .profile-image {
+        transform: none; 
+        box-shadow: none;
+    }
+}
