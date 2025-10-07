@@ -1,1 +1,24 @@
-[]
+[
+    {
+        "id": 1, 
+        "title": "Portfólio Pessoal em React",
+        "description": "Seu portfólio pessoal construído do zero com React, demonstrando domínio em componentização, rotas (React Router) e estilos avançados.",
+        "image": "/images/portfolio-react.png",
+        "technologies": ["React", "React Router", "CSS3", "JavaScript"],
+        "links": {
+            "demo": "https://natan-ramos.github.io/Portflio-React/",
+            "github": "https://github.com/natan-ramos/Portflio-React" 
+        }
+    },
+    {
+        "id": 2, 
+        "title": "Timer Pomodoro e Lista de Tarefas",
+        "description": "Aplicação web (HTML, CSS e JavaScript puro) para produtividade. Possui lista de tarefas sincronizada com o timer e previsão da hora de pausa.",
+        "image": "/images/pomodoro-timer.png", 
+        "technologies": ["JavaScript", "HTML5", "CSS3"],
+        "links": {
+            "demo": "https://natan-ramos.github.io/Pomodoro-Timer-JS/",
+            "github": "https://github.com/natan-ramos/Pomodoro-Timer-JS" 
+        }
+    }
+]
